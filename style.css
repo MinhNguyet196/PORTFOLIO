@@ -25,3 +25,52 @@ figcaption span{margin-top:6px;color:var(--muted)}
 .timeline p{font-size:14px}
 @media(max-width:850px){.timeline>div{grid-row:span 3}.hero-art{min-height:0}}
 @media(max-width:600px){.hero-art{min-height:0;margin:0 6% 28px}.story:nth-of-type(even) .story-gallery{order:initial}.root-photo{width:100%}.timeline>div{display:block}.timeline h4{margin:15px 0}.timeline p{margin-bottom:15px}}
+/* Palette inspired by the supplied reference: forest, cream, lime and yellow. */
+:root{--paper:#f1eee5;--ink:#082d16;--muted:#4c6048;--line:#b9c4aa;--forest:#082d16;--lime:#a5ce43;--yellow:#f5d84c}
+body{background:var(--paper);color:var(--ink)}
+::selection{background:var(--yellow);color:var(--forest)}
+header{background:#f1eee5f5;border-bottom-color:var(--line)}
+nav a:hover,nav a.active{color:#426817}
+.nav-contact{background:var(--forest);color:var(--paper);border-color:var(--forest)}
+nav .nav-contact:hover{background:var(--lime);color:var(--forest)}
+em{color:#426817}
+.hero{background:var(--forest);color:var(--paper);border-bottom:7px solid var(--lime)}
+.hero h1 em{color:var(--lime)}
+.hero .eyebrow{color:var(--yellow)}
+.hero .hero-note,.hero-bottom{color:#d2dcc8}
+.hero .button{background:var(--yellow);color:var(--forest);border:0;border-radius:28px;padding:11px 22px;font-weight:600;gap:20px}
+.hero .button:hover{background:var(--lime)}
+.hero-art{background:var(--paper);padding:14px;border-radius:22px;margin-top:42px;margin-bottom:42px}
+.hero-art>img{border-radius:12px}
+.hero-art figcaption{padding:14px 4px 4px}
+.hero-art figcaption strong{color:var(--forest)}
+.hero-art figcaption span{color:var(--muted)}
+.root-photo{background:var(--forest);border-radius:24px;padding:18px;box-shadow:9px 9px 0 var(--lime)}
+.root-photo img{border-radius:12px}
+.root-photo figcaption strong{color:var(--paper)}
+.root-photo figcaption span{color:#d2dcc8}
+.roots p:not(.eyebrow):not(.signature),.story-copy>p:not(.eyebrow){color:#3e513c}
+.flower-nav{background:var(--forest);border:0;border-radius:20px;overflow:hidden}
+.flower-nav a{color:var(--paper);border-color:#ffffff30}
+.flower-nav small,.flower-nav span{color:var(--lime)}
+.flower-nav a:hover{background:var(--lime);color:var(--forest)}
+.flower-nav a:hover small,.flower-nav a:hover span{color:var(--forest)}
+.story-gallery figure{background:#e1e8d3;border:1px solid #b9c9a2;border-radius:18px}
+.story-gallery figure>img{border-radius:8px}
+.iris .story-gallery figure,.hydrangea .story-gallery figure{background:var(--forest);border-color:var(--forest)}
+.iris figcaption strong,.hydrangea figcaption strong{color:var(--paper)}
+.iris figcaption span,.hydrangea figcaption span{color:#d2dcc8}
+.sunflower .story-gallery figure{background:#f3e9ad;border-color:#d6c969}
+.stats strong{color:#426817}
+.timeline>div{border-top:2px solid #7b9c45}
+.timeline>div:before{background:var(--forest);width:9px;height:9px;top:-5px}
+.timeline>div>span{color:#426817;font-weight:600}
+.contact{background:var(--forest);color:var(--paper);border-top:7px solid var(--lime)}
+.contact em,.contact>.wrap>.eyebrow{color:var(--yellow)}
+.contact-links span{color:var(--lime)}
+.contact-links a:hover{color:var(--yellow)}
+footer{color:#d2dcc8}
+a:focus-visible{outline:3px solid #6d922a;outline-offset:5px}
+.hero a:focus-visible,.contact a:focus-visible,.flower-nav a:focus-visible{outline-color:var(--yellow)}
+@media(max-width:600px){.hero-art{margin:0 6% 30px;padding:12px}.hero .button{font-size:13px;gap:12px}.root-photo{box-shadow:6px 6px 0 var(--lime)}.flower-nav a{border-bottom-color:#ffffff30}}
+
