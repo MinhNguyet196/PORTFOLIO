@@ -105,3 +105,19 @@ a:focus-visible{outline:3px solid #6d922a;outline-offset:5px}
 @media(max-width:850px){nav{gap:16px}.story-pair .story-copy{column-gap:5%}.story-pair .story-gallery figure{grid-template-rows:250px auto}.story-pair .story-gallery figure>img{height:250px}.skill-card{padding:24px}}
 @media(max-width:600px){header nav{gap:6px;flex-wrap:wrap;font-size:12px}.story-pair .story-copy{display:block}.story-pair .story-copy>h3{margin-bottom:26px}.story-pair .story-gallery{grid-template-columns:1fr;gap:20px}.story-pair .story-gallery figure{grid-template-rows:auto auto}.story-pair .story-gallery figure>img{height:auto;max-height:350px}.story{padding:42px 0}.skills{padding-bottom:60px}.skills-grid{grid-template-columns:1fr;gap:18px}.skill-card h3{font-size:27px}.hero-art{justify-self:stretch}}
 
+
+/* Image buttons retain the full original image and gallery proportions. */
+.image-zoom{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in;border-radius:10px;align-self:start}
+.image-zoom img{display:block;width:100%;height:auto;object-fit:contain;border-radius:8px}
+.image-zoom:focus-visible{outline:3px solid #789d2f;outline-offset:5px}
+.story-gallery .image-zoom img{max-height:390px}
+.story-pair .story-gallery .image-zoom img{height:310px;max-height:none}
+.image-viewer{padding:0;border:0;background:transparent;max-width:96vw;max-height:96dvh;color:#f1eee5;overflow:auto}
+.image-viewer::backdrop{background:rgba(2,15,8,.92)}
+.viewer-panel{position:relative;width:max-content;max-width:94vw;padding:48px 12px 12px;background:#082d16;border-radius:14px}
+.viewer-image{width:auto;max-width:calc(94vw - 24px);height:auto;max-height:calc(90dvh - 130px);object-fit:contain;margin:auto}
+.viewer-close{position:absolute;top:5px;right:8px;width:40px;height:40px;border:0;border-radius:50%;background:#f1eee5;color:#082d16;font:30px/1 sans-serif;cursor:pointer}
+.viewer-close:focus-visible{outline:3px solid #f5d84c;outline-offset:2px}
+.viewer-caption{max-width:850px;white-space:pre-line;margin:12px auto 0;font-size:14px;line-height:1.6;text-align:center}
+@media(max-width:850px){.story-pair .story-gallery .image-zoom img{height:250px}}
+@media(max-width:600px){.story-pair .story-gallery .image-zoom img{height:auto;max-height:350px}.viewer-panel{max-width:96vw}.viewer-image{max-width:calc(96vw - 24px)}.viewer-caption{font-size:13px}}
