@@ -182,3 +182,23 @@ header nav{gap:24px}
 #huong-duong .chapter-heading{border-bottom-color:#e5b932}
 @media(max-width:850px){.flower-chapter{padding:0 24px 12px;margin-bottom:48px}.flower-chapter .chapter-heading{margin-left:-24px;margin-right:-24px;padding:22px 24px}.flower-chapter .chapter-heading .eyebrow{font-size:16px;flex-basis:280px}}
 @media(max-width:600px){.flower-chapter{padding:0 18px 6px;margin-bottom:38px;border-radius:18px}.flower-chapter .chapter-heading{margin:0 -18px 24px;padding:20px 18px;gap:12px}.flower-chapter .chapter-heading .eyebrow{flex-basis:100%;font-size:16px;letter-spacing:.5px}.flower-chapter .chapter-heading h3{font-size:14px;padding:5px 12px}.flower-chapter .chapter-intro{padding-bottom:22px}.flower-chapter .milestone{gap:18px;padding-bottom:26px}.flower-chapter .milestone-copy h4{font-size:25px}}
+
+/* Two life stages replace the floral narrative. */
+.life-stages{padding-top:10px;padding-bottom:72px}
+.stages-intro{font-size:18px;line-height:1.9;color:var(--muted);max-width:900px;margin:0 auto 42px;text-align:justify;text-align-last:start}
+.life-stage{margin-bottom:56px;padding:0 30px 12px;border:1px solid #aabf95;border-radius:22px;background:#faf8f0;overflow:hidden;scroll-margin-top:20px}
+.life-stage:last-child{margin-bottom:0}
+.stage-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:var(--forest);color:var(--paper);margin:0 -30px 28px;padding:24px 30px;border-bottom:5px solid var(--lime)}
+.stage-heading h2{font:600 22px/1.5 'Be Vietnam Pro',sans-serif;letter-spacing:.7px;margin:0}
+.stage-heading>span{font-size:16px;color:var(--lime);white-space:nowrap}
+.life-stage .chapter-intro{max-width:none}
+.school-milestone{padding:30px 0;border-top:1px solid var(--line)}
+.school-milestone:first-child{border-top:0;padding-top:0}
+.school-milestone .milestone-copy{max-width:900px;margin-bottom:22px}
+.life-stage .milestone-copy h3{font:500 28px/1.4 var(--serif);letter-spacing:-.4px;margin:0 0 16px}
+.school-milestone .milestone-copy p+p{margin-top:12px}
+.milestone-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.milestone-pair .image-zoom img{height:290px;max-height:none;width:100%;object-fit:contain}
+.life-stage .milestone:first-child{border-top:0}
+@media(max-width:700px){.life-stage{padding:0 18px 8px;margin-bottom:36px}.stage-heading{margin:0 -18px 24px;padding:20px 18px;gap:10px}.stage-heading h2{font-size:19px}.stages-intro{font-size:16px}.milestone-pair{gap:14px}.milestone-pair .image-zoom img{height:210px}.life-stage .milestone-copy h3{font-size:25px}}
+@media(max-width:480px){.milestone-pair{grid-template-columns:1fr}.milestone-pair .image-zoom img{height:auto;max-height:330px}.life-stages{padding-bottom:48px}.stage-heading>span{font-size:14px}}
