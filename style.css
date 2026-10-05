@@ -95,13 +95,13 @@ a:focus-visible{outline:3px solid #6d922a;outline-offset:5px}
 .skills-intro{max-width:none;width:100%;color:var(--muted);margin-bottom:32px}
 .skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
 .skill-card{padding:30px;border:1px solid var(--line);border-radius:20px;background:#e1e8d3;display:flex;flex-direction:column}
-.skill-card:nth-child(3),.skill-card:nth-child(4){background:var(--forest);color:var(--paper);border-color:var(--forest)}
+.skill-card:nth-child(2),.skill-card:nth-child(3){background:var(--forest);color:var(--paper);border-color:var(--forest)}
 .skill-number{font-size:12px;letter-spacing:1.2px;font-weight:600;color:#426817}
-.skill-card:nth-child(3) .skill-number,.skill-card:nth-child(4) .skill-number{color:var(--lime)}
+.skill-card:nth-child(2) .skill-number,.skill-card:nth-child(3) .skill-number{color:var(--lime)}
 .skill-card h3{font-size:29px;line-height:1.35;letter-spacing:-.5px;margin:16px 0}
 .skill-card>p{font-size:16px;line-height:1.85}
 .skill-card .skill-context{font-size:14px;border-top:1px solid #72886750;padding-top:16px;margin: auto 0 0;color:var(--muted)}
-.skill-card:nth-child(3) .skill-context,.skill-card:nth-child(4) .skill-context{color:#d2dcc8;border-color:#ffffff30}
+.skill-card:nth-child(2) .skill-context,.skill-card:nth-child(3) .skill-context{color:#d2dcc8;border-color:#ffffff30}
 @media(max-width:850px){nav{gap:16px}.story-pair .story-copy{column-gap:5%}.story-pair .story-gallery figure{grid-template-rows:250px auto}.story-pair .story-gallery figure>img{height:250px}.skill-card{padding:24px}}
 @media(max-width:600px){header nav{gap:6px;flex-wrap:wrap;font-size:12px}.story-pair .story-copy{display:block}.story-pair .story-copy>h3{margin-bottom:26px}.story-pair .story-gallery{grid-template-columns:1fr;gap:20px}.story-pair .story-gallery figure{grid-template-rows:auto auto}.story-pair .story-gallery figure>img{height:auto;max-height:350px}.story{padding:42px 0}.skills{padding-bottom:60px}.skills-grid{grid-template-columns:1fr;gap:18px}.skill-card h3{font-size:27px}.hero-art{justify-self:stretch}}
 
@@ -249,3 +249,30 @@ footer{padding-bottom:85px}
 @media(hover:hover){.image-zoom:hover img{transform:none}}
 
 .skill-language{grid-column:1/-1}.skill-language h3{margin-bottom:0}
+
+/* Distinct chapters and project case studies. */
+.profile{min-height:calc(100svh - 96px)}
+.profile h1{font-size:clamp(36px,4.1vw,58px)}
+.profile-intro+.profile-intro{margin-top:16px}
+.profile-location{font-size:12px;letter-spacing:1px;margin:24px 0 0;color:var(--muted)}
+.chapter-section,.skills.wrap{padding-top:80px;padding-bottom:80px;border-top:1px solid var(--line)}
+.foundation-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin:42px 0}
+.foundation-item{border-top:3px solid var(--lime);padding-top:24px}
+.foundation-item strong{display:block;font:500 clamp(32px,3.2vw,46px)/1.2 var(--serif);margin-bottom:18px}
+.foundation-item p{font-size:15px;line-height:1.8;margin:0}
+.foundation-note{margin:0}.foundation-note em{color:var(--muted)}
+.projects-heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:12px}.projects-heading>span{white-space:nowrap;color:var(--muted)}
+.project-card{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:36px;align-items:center;border:1px solid var(--line);border-radius:22px;padding:32px;margin-top:28px;background:#e1e8d3}
+.project-card h3{font-size:27px;letter-spacing:-.5px;margin:0 0 12px;line-height:1.35}
+.project-meta{font-size:14px;color:var(--muted);margin-bottom:24px}
+.project-card h4{font:600 15px/1.6 'Be Vietnam Pro',sans-serif;margin:22px 0 10px}
+.project-card p,.project-card li{font-size:15px;line-height:1.85}
+.project-card ul{margin:0;padding-left:20px}.project-card li+li{margin-top:12px}
+.project-photo{margin:0;min-width:0}.project-photo img{width:100%;height:auto;object-fit:contain}
+.research-card{display:block;background:var(--forest);color:var(--paper)}.research-card .project-meta{color:var(--lime)}
+.research-details{display:grid;grid-template-columns:1fr 1.5fr;gap:35px}
+.tool-tags{display:flex;gap:10px}.tool-tags span{border:1px solid #ffffff50;border-radius:30px;padding:4px 16px}
+.competition-item+.competition-item{border-top:1px solid var(--line);margin-top:20px}.competition-item p{margin-bottom:0}
+@media(max-width:850px){.foundation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.project-card{gap:24px;padding:24px;grid-template-columns:1fr}.project-photo{width:100%;max-width:620px;justify-self:center}}
+@media(max-width:600px){.profile{min-height:0}.chapter-section,.skills.wrap{padding-top:52px;padding-bottom:52px}.foundation-grid{gap:24px 18px}.foundation-item strong{font-size:32px}.foundation-item p{font-size:14px}.projects-heading{display:block}.project-card{padding:20px}.project-card h3{font-size:24px}.research-details{grid-template-columns:1fr;gap:0}}
+@media print{.chapter-section,.skills.wrap{break-before:page}.project-card{break-inside:avoid}}
