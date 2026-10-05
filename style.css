@@ -95,13 +95,13 @@ a:focus-visible{outline:3px solid #6d922a;outline-offset:5px}
 .skills-intro{max-width:none;width:100%;color:var(--muted);margin-bottom:32px}
 .skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
 .skill-card{padding:30px;border:1px solid var(--line);border-radius:20px;background:#e1e8d3;display:flex;flex-direction:column}
-.skill-card:nth-child(2),.skill-card:nth-child(3){background:var(--forest);color:var(--paper);border-color:var(--forest)}
+.skill-card:nth-child(3),.skill-card:nth-child(4){background:var(--forest);color:var(--paper);border-color:var(--forest)}
 .skill-number{font-size:12px;letter-spacing:1.2px;font-weight:600;color:#426817}
-.skill-card:nth-child(2) .skill-number,.skill-card:nth-child(3) .skill-number{color:var(--lime)}
+.skill-card:nth-child(3) .skill-number,.skill-card:nth-child(4) .skill-number{color:var(--lime)}
 .skill-card h3{font-size:29px;line-height:1.35;letter-spacing:-.5px;margin:16px 0}
 .skill-card>p{font-size:16px;line-height:1.85}
 .skill-card .skill-context{font-size:14px;border-top:1px solid #72886750;padding-top:16px;margin: auto 0 0;color:var(--muted)}
-.skill-card:nth-child(2) .skill-context,.skill-card:nth-child(3) .skill-context{color:#d2dcc8;border-color:#ffffff30}
+.skill-card:nth-child(3) .skill-context,.skill-card:nth-child(4) .skill-context{color:#d2dcc8;border-color:#ffffff30}
 @media(max-width:850px){nav{gap:16px}.story-pair .story-copy{column-gap:5%}.story-pair .story-gallery figure{grid-template-rows:250px auto}.story-pair .story-gallery figure>img{height:250px}.skill-card{padding:24px}}
 @media(max-width:600px){header nav{gap:6px;flex-wrap:wrap;font-size:12px}.story-pair .story-copy{display:block}.story-pair .story-copy>h3{margin-bottom:26px}.story-pair .story-gallery{grid-template-columns:1fr;gap:20px}.story-pair .story-gallery figure{grid-template-rows:auto auto}.story-pair .story-gallery figure>img{height:auto;max-height:350px}.story{padding:42px 0}.skills{padding-bottom:60px}.skills-grid{grid-template-columns:1fr;gap:18px}.skill-card h3{font-size:27px}.hero-art{justify-self:stretch}}
 
@@ -247,3 +247,5 @@ footer{padding-bottom:85px}
 .story-pair .story-gallery .image-zoom img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;border-radius:0}
 .profile-photo figcaption{color:var(--ink);padding:12px 0 0}
 @media(hover:hover){.image-zoom:hover img{transform:none}}
+
+.skill-language{grid-column:1/-1}.skill-language h3{margin-bottom:0}
