@@ -1,5 +1,29 @@
 <!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><script>
+(() => {
+  const navigation = performance.getEntriesByType('navigation')[0];
+  if (!navigation || navigation.type !== 'reload') return;
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  // Remove the old section anchor only on reload; normal navigation stays intact.
+  history.replaceState(history.state, '', location.pathname + location.search);
+  const resetScroll = () => {
+    const root = document.documentElement;
+    const previous = root.style.scrollBehavior;
+    root.style.scrollBehavior = 'auto';
+    window.scrollTo(0, 0);
+    root.style.scrollBehavior = previous;
+  };
+  window.addEventListener('pageshow', event => {
+    if (event.persisted) return;
+    resetScroll();
+    requestAnimationFrame(() => {
+      resetScroll();
+      if ('scrollRestoration' in history) history.scrollRestoration = 'auto';
+    });
+  }, { once: true });
+})();
 <html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Nguyễn Minh Nguyệt — Portfolio</title><meta name="description" content="Những trải nghiệm, dự án và kỹ năng của Nguyễn Minh Nguyệt, sinh viên K63 chuyên ngành Kinh tế quốc tế tại Trường Đại học Ngoại thương."><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2040%2040'%3E%3Crect%20width='40'%20height='40'%20rx='20'%20fill='%232b412f'/%3E%3Ctext%20x='20'%20y='28'%20text-anchor='middle'%20font-size='28'%20fill='%23f4ebd9'%3E%E2%9C%B3%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="style.css"></head>
+</script><meta name="viewport" content="width=device-width, initial-scale=1"><title>Nguyễn Minh Nguyệt — Portfolio</title><meta name="description" content="Những trải nghiệm, dự án và kỹ năng của Nguyễn Minh Nguyệt, sinh viên K63 chuyên ngành Kinh tế quốc tế tại Trường Đại học Ngoại thương."><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2040%2040'%3E%3Crect%20width='40'%20height='40'%20rx='20'%20fill='%232b412f'/%3E%3Ctext%20x='20'%20y='28'%20text-anchor='middle'%20font-size='28'%20fill='%23f4ebd9'%3E%E2%9C%B3%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="style.css"></head>
 <body><a class="skip" href="#home">Đến nội dung</a><header><a class="brand" href="#home">Minh Nguyệt<span>PERSONAL PORTFOLIO</span></a><nav aria-label="Điều hướng chính"><a href="#home">Giới thiệu</a><a href="#uom-mam">Thời học sinh</a><a href="#hanh-trinh">Sinh viên</a><a href="#ky-nang">Kỹ năng</a><a href="#lien-he" class="nav-contact">Liên hệ ↗</a></nav></header>
 <main><section class="profile wrap" id="home" aria-labelledby="profile-title">
 <figure class="profile-photo"><button class="image-zoom" type="button" aria-label="Phóng to: Ảnh chân dung Nguyễn Minh Nguyệt" aria-haspopup="dialog"><img src="anh-the.jpg" alt="Ảnh chân dung Nguyễn Minh Nguyệt" width="1707" height="2560" fetchpriority="high"></button><figcaption>Nguyễn Minh Nguyệt</figcaption></figure>
@@ -8,6 +32,7 @@
 <div class="stage-heading"><h2>HÀNH TRÌNH VƯƠN MÌNH</h2><span>2024–nay</span></div>
 <p class="chapter-intro">Bước vào đại học, mình muốn trải nghiệm nhiều hơn ngoài những gì diễn ra trong lớp học. Mình bắt đầu thử sức với các cuộc thi, hoạt động câu lạc bộ và nghiên cứu khoa học - những môi trường giúp mình gặp gỡ nhiều người hơn, làm những điều mới và hiểu thêm về chính mình.</p>
 <div class="milestones"><div class="milestone"><div class="milestone-copy"><h3>We, The IceBreakers</h3><p>Giải Nhì toàn trường.</p></div><figure class="milestone-image"><button class="image-zoom" type="button" aria-label="Phóng to: Nguyễn Minh Nguyệt cùng các bạn tại cuộc thi We, The IceBreakers" aria-haspopup="dialog"><img src="image5.jpeg" alt="Nguyễn Minh Nguyệt cùng các bạn tại cuộc thi We, The IceBreakers" width="730" height="730" loading="lazy"></button></figure></div><div class="milestone"><div class="milestone-copy"><h3>Câu lạc bộ</h3><p>Thành viên CLB Nghiên cứu Thị trường Bất động sản</p><p style="margin-top: 12px">Ban Tổ chức cuộc thi The Real Contest 2024 với vai trò Phó ban Đối ngoại</p></div><figure class="milestone-image"><button class="image-zoom" type="button" aria-label="Phóng to: Ảnh tập thể tại cuộc thi The Real Contest 2024" aria-haspopup="dialog"><img src="the-real-contest-2024.png" alt="Ảnh tập thể tại cuộc thi The Real Contest 2024" width="2048" height="1365" loading="lazy"></button></figure></div><div class="milestone milestone-text-only"><div class="milestone-copy"><h3>Nghiên cứu khoa học</h3><p>Tham gia cuộc thi Sinh viên Nghiên cứu khoa học Khoa Kinh tế quốc tế</p><p style="margin-top: 12px">Một trong những trải nghiệm đầu tiên giúp mình tiếp cận quá trình nghiên cứu khoa học một cách thực tế hơn.</p></div></div><div class="milestone milestone-text-only"><div class="milestone-copy"><h3>Các cuộc thi</h3><p>Gameshow IPChallenge 2025</p><p style="margin-top: 12px">Cuộc thi Borderless Hackonomics 2026 - mùa 2</p></div></div></div></article></section><section class="skills wrap" id="ky-nang" aria-labelledby="skills-title">
+<div class="milestones"><div class="milestone"><div class="milestone-copy"><h3>We, The IceBreakers</h3><p>Giải Nhì toàn trường.</p></div><figure class="milestone-image"><button class="image-zoom" type="button" aria-label="Phóng to: Nguyễn Minh Nguyệt cùng các bạn tại cuộc thi We, The IceBreakers" aria-haspopup="dialog"><img src="image5.jpeg" alt="Nguyễn Minh Nguyệt cùng các bạn tại cuộc thi We, The IceBreakers" width="730" height="730" loading="lazy"></button></figure></div><div class="milestone"><div class="milestone-copy"><h3>Câu lạc bộ</h3><p>Thành viên Ban đối ngoại CLB Nghiên cứu Thị trường Bất động sản</p><p style="margin-top: 12px">Ban Tổ chức cuộc thi The Real Contest 2024 với vai trò Phó ban Đối ngoại</p></div><figure class="milestone-image"><button class="image-zoom" type="button" aria-label="Phóng to: Ảnh tập thể tại cuộc thi The Real Contest 2024" aria-haspopup="dialog"><img src="the-real-contest-2024.png" alt="Ảnh tập thể tại cuộc thi The Real Contest 2024" width="2048" height="1365" loading="lazy"></button></figure></div><div class="milestone milestone-text-only"><div class="milestone-copy"><h3>Nghiên cứu khoa học</h3><p>Tham gia cuộc thi Sinh viên Nghiên cứu khoa học Khoa Kinh tế quốc tế</p><p style="margin-top: 12px">Một trong những trải nghiệm đầu tiên giúp mình tiếp cận quá trình nghiên cứu khoa học một cách thực tế hơn.</p></div></div><div class="milestone milestone-text-only"><div class="milestone-copy"><h3>Các cuộc thi</h3><p>Gameshow IPChallenge 2025</p><p style="margin-top: 12px">Cuộc thi Borderless Hackonomics 2026</p></div></div></div></article></section><section class="skills wrap" id="ky-nang" aria-labelledby="skills-title">
 <p class="eyebrow">NHỮNG ĐIỀU MÌNH TÍCH LŨY</p>
 <h2 id="skills-title">Kỹ năng mình đã <em>trau dồi.</em></h2>
 <p class="skills-intro">Từ học tập, nghiên cứu đến làm việc cùng mọi người, mỗi trải nghiệm đều góp phần định hình cách mình tư duy, giao tiếp và làm việc.</p>
