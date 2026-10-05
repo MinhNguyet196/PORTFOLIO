@@ -147,3 +147,23 @@ header nav{gap:24px}
 .skills-intro,
 .skill-card>p:not(.skill-context),
 .hero-note{text-align:justify;text-align-last:start}
+
+.profile-intro{font-size:16px;line-height:1.9;text-align:justify;text-align-last:start;color:var(--muted);margin:0}
+
+/* First flower: chronological milestones with matching images. */
+.flower-chapter{padding:60px 0;border-bottom:1px solid var(--line)}
+.chapter-heading{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap}
+.chapter-heading .eyebrow{margin-bottom:16px}
+.chapter-heading h3{font:400 38px/1.3 var(--serif);margin:0 0 24px;color:var(--ink)}
+.chapter-intro{font-size:16px;line-height:1.9;text-align:justify;text-align-last:start;color:#3e513c;max-width:900px;margin-bottom:40px}
+.milestone{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:center;gap:7%;padding:30px 0;border-top:1px solid var(--line)}
+.milestone-copy h4{font:500 30px/1.35 var(--serif);margin:0 0 16px}
+.milestone-copy p{font-size:16px;line-height:1.85;text-align:justify;text-align-last:start;color:#3e513c;margin:0}
+.milestone-image{margin:0;padding:16px;border:1px solid #b9c9a2;border-radius:18px;background:#e1e8d3}
+.milestone-image .image-zoom img{width:100%;height:auto;max-height:310px;object-fit:contain;border-radius:8px}
+@media(max-width:600px){.flower-chapter{padding:40px 0}.chapter-heading{gap:0}.chapter-heading h3{font-size:32px}.milestone{grid-template-columns:1fr;gap:22px;padding:26px 0}.milestone-copy h4{font-size:27px}.milestone-image{padding:12px}}
+
+.admission-score{margin-top:24px;border-left:3px solid #789d2f;padding-left:20px}
+.admission-score>span{display:block;font-size:14px;color:var(--muted)}
+.admission-score>strong{display:block;font:600 46px/1.3 var(--serif);color:var(--ink);margin:6px 0 10px}
+.milestone-text-only{grid-template-columns:1fr}
