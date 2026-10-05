@@ -276,3 +276,13 @@ footer{padding-bottom:85px}
 @media(max-width:850px){.foundation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.project-card{gap:24px;padding:24px;grid-template-columns:1fr}.project-photo{width:100%;max-width:620px;justify-self:center}}
 @media(max-width:600px){.profile{min-height:0}.chapter-section,.skills.wrap{padding-top:52px;padding-bottom:52px}.foundation-grid{gap:24px 18px}.foundation-item strong{font-size:32px}.foundation-item p{font-size:14px}.projects-heading{display:block}.project-card{padding:20px}.project-card h3{font-size:24px}.research-details{grid-template-columns:1fr;gap:0}}
 @media print{.chapter-section,.skills.wrap{break-before:page}.project-card{break-inside:avoid}}
+
+/* Skill footer tags wrap naturally on smaller screens. */
+.skills-intro em{color:inherit}
+.skill-tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:auto 0 0;padding:20px 0 0}
+.skill-tags li{font-size:12px;font-weight:500;line-height:1.6;padding:5px 11px;border:1px solid #72886770;border-radius:30px;color:var(--ink);max-width:100%;overflow-wrap:anywhere}
+.skill-card:nth-child(2) .skill-tags li,.skill-card:nth-child(3) .skill-tags li{color:var(--paper);border-color:#ffffff50}
+
+.project-role-highlight{color:#426817}.tool-tags{flex-wrap:wrap}
+
+.chapter-title{font-family:"Be Vietnam Pro",sans-serif;font-size:clamp(24px,3vw,36px);font-weight:700;line-height:1.4;letter-spacing:.5px;margin:0 0 30px;color:var(--ink)}
