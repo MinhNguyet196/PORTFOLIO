@@ -202,3 +202,48 @@ header nav{gap:24px}
 .life-stage .milestone:first-child{border-top:0}
 @media(max-width:700px){.life-stage{padding:0 18px 8px;margin-bottom:36px}.stage-heading{margin:0 -18px 24px;padding:20px 18px;gap:10px}.stage-heading h2{font-size:19px}.stages-intro{font-size:16px}.milestone-pair{gap:14px}.milestone-pair .image-zoom img{height:210px}.life-stage .milestone-copy h3{font-size:25px}}
 @media(max-width:480px){.milestone-pair{grid-template-columns:1fr}.milestone-pair .image-zoom img{height:auto;max-height:330px}.life-stages{padding-bottom:48px}.stage-heading>span{font-size:14px}}
+
+/* Gentle entrance motion and optional official music player. */
+.scroll-reveal{transition:opacity .65s ease,transform .65s cubic-bezier(.2,.65,.3,1)}
+.reveal-pending{opacity:0;transform:translateY(24px)}
+.is-visible{opacity:1;transform:none}
+.image-zoom img{transition:transform .3s ease}
+.image-zoom{overflow:hidden}
+@media(hover:hover){.image-zoom:hover img{transform:scale(1.025)}.skill-card:hover{transform:translateY(-4px);box-shadow:0 10px 25px #082d1614}}
+.skill-card{transition:transform .3s ease,box-shadow .3s ease,opacity .65s ease}
+.button,.nav-contact{transition:background-color .2s ease,color .2s ease}
+.music-widget{position:fixed;bottom:20px;right:20px;z-index:30;max-width:calc(100vw - 32px);font-size:14px}
+.music-toggle{display:flex;align-items:center;gap:10px;margin-left:auto;padding:12px 18px;border:1px solid #a5ce4370;border-radius:30px;background:#082d16;color:#f1eee5;font:500 14px/1.5 'Be Vietnam Pro',sans-serif;box-shadow:0 4px 20px #0002;cursor:pointer}
+.music-panel{position:absolute;right:0;bottom:64px;width:380px;max-width:calc(100vw - 32px);padding:16px;background:#f1eee5;color:#082d16;border:1px solid #aabf95;border-radius:18px;box-shadow:0 12px 48px #0004;max-height:calc(100dvh - 110px);overflow:auto}
+.music-panel[hidden]{display:none}
+.music-heading{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.music-close{width:36px;height:36px;background:#082d16;color:white;border:0;border-radius:50%;font-size:26px;cursor:pointer}
+.music-panel p{font-size:13px;line-height:1.6;margin:12px 0}
+.music-player iframe{display:block;width:100%;height:210px;border:0;border-radius:8px;background:#000}
+.music-panel>a{display:block;margin-top:12px;font-size:13px;text-decoration:underline}
+.music-widget button:focus-visible{outline:3px solid #789d2f;outline-offset:3px}
+footer{padding-bottom:85px}
+@media(max-width:600px){.music-widget{right:12px;bottom:12px}.music-toggle{padding:10px 14px;font-size:12px}.music-panel{bottom:58px}}
+@media(prefers-reduced-motion:reduce){.scroll-reveal,.image-zoom img,.skill-card,.button,.nav-contact{transition:none!important;transform:none!important}.reveal-pending{opacity:1}.skill-card:hover{transform:none}}
+@media print{.music-widget{display:none}.reveal-pending{opacity:1;transform:none}}
+
+.music-player audio{display:block;width:100%;margin:8px 0;color-scheme:light}
+
+/* Compact background-music control; no floating player panel. */
+.background-music{display:none}
+.music-toggle{padding:9px 13px;gap:8px;font-size:12px;min-height:42px}
+.music-toggle.is-playing{border-color:var(--lime)}
+.music-toggle.is-playing>span:first-child{color:var(--lime)}
+@media(max-width:600px){.music-widget{right:10px;bottom:10px}.music-toggle{padding:8px 12px}}
+
+/* Show photos directly, without padded frames or fixed-height empty space. */
+.profile-photo,.milestone-image,.story-gallery figure,.root-photo,.hero-art{padding:0;background:transparent;border:0;box-shadow:none;border-radius:0}
+.milestone-pair{align-items:start}
+.image-zoom{padding:0;background:transparent;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.profile-photo .image-zoom img,
+.milestone-image .image-zoom img,
+.milestone-pair .image-zoom img,
+.story-gallery .image-zoom img,
+.story-pair .story-gallery .image-zoom img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;border-radius:0}
+.profile-photo figcaption{color:var(--ink);padding:12px 0 0}
+@media(hover:hover){.image-zoom:hover img{transform:none}}
