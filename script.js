@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* Reveal once on entry; content stays readable without JavaScript. */
 document.addEventListener('DOMContentLoaded', () => {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const targets = [...document.querySelectorAll('.profile-photo, .profile-copy, .stages-intro, .stage-heading, .school-milestone, .life-stage .milestone, .skills>h2, .skills-intro, .skill-card, .contact>.wrap>h2')];
+  const targets = [...document.querySelectorAll('.profile-photo, .profile-copy, .foundation>h2, .foundation-item, .foundation-note, .projects-heading, .project-card, .skills>h2, .skills-intro, .skill-card, .contact>.wrap>h2')];
   if (!reduced.matches && 'IntersectionObserver' in window) {
     const reveal = element => { element.classList.add('is-visible'); element.classList.remove('reveal-pending'); };
     const entrance = new IntersectionObserver(entries => {
